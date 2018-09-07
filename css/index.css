@@ -11,16 +11,16 @@ ul * {
 }
 
 body {
+    margin: 0;
     font-family: 'Marmelad', sans-serif;
     background: url("../img/header_fon.jpg") no-repeat center top;
     background-size: 100% 400px;
-    width: 90%;
-    max-width: 992px;
-    margin: auto;
 }
 
 #upper-part {
-
+    width: 90%;
+    max-width: 992px;
+    margin: auto;
     display: grid;
     grid-template-columns: 150px auto;
     grid-template-rows: 120px auto;
@@ -68,7 +68,6 @@ header {
 
 .searcharea[type="search"]{
     width: 67%;
-
 }
 
 nav ul:first-of-type {
@@ -111,7 +110,7 @@ ul:hover {
     list-style-image: initial !important;
     display: none;
     padding-left: 5px;
-
+    background-color: initial !important;
 }
 
 .hasdropmenu:hover .submainmenu {
@@ -257,8 +256,10 @@ ul {
 
 .chapter{
     font-family: 'Russo One', sans-serif;
-  text-align: center;
+    text-align: center;
+    margin: 0;
 }
+
 .films_grid {
     display: grid;
     align-items: start;
@@ -293,11 +294,16 @@ ul {
 .moviereview {
     text-align: justify;
     word-wrap: break-word;
+    font-size: small;
+}
+
+.moreInfo{
+    color: #af140c;
 }
 
 .moviereview span p::first-letter {
     float: left;
-    font-size: 3em;
+    font-size: 2em;
     color: #af140c;
     margin-right: 2px;
 }
@@ -352,14 +358,54 @@ ul {
     justify-self: center;
 }
 
+footer {
+    color: #ffffff;
+    text-shadow: 0 0 3px #000000;
+    margin: 5px 0;
+    background-color: lightgrey;
+}
+
 
 .blockkontakts {
+    width: 90%;
+    max-width: 992px;
+    margin: auto;
+}
 
-    background-color: lightgrey;
+.blockkontakts h3 {
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+}
+
+.bottomPart {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6px;
 }
 
 .contacts {
     display: inline-block;
+    margin: 0;
+}
+
+.contacts p{
+    margin: 0;
+
+}
+
+.rightreserved {
+    width: 90%;
+    max-width: 992px;
+    margin: auto;
+    margin-top: 0;
+    font-size: xx-small;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightreserved p {
+    color: #820400;
+    margin-top: 0;
 }
 
 
@@ -383,7 +429,24 @@ ul {
         justify-content: center;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3,auto);
+        /*grid-auto-rows: unset;*/
     }
+
+    .filmblock{
+        border-bottom: 1px #820400;
+    }
+
+    /*.movieBlock3{*/
+        /*display: none;*/
+    /*}*/
+
+    .kino_small {
+        float: left;
+        margin-right: 4px;
+    }
+
+
+
     .mainform {
         display: grid;
         grid-template-columns: 1fr;
@@ -476,8 +539,8 @@ ul {
         grid-area: films_mobile;
     }
 
-    .poster_small{
-        ;
+    .kino_small {
+        width: 40%;
     }
 
     #form {
@@ -493,10 +556,16 @@ ul {
         display: flex;
         justify-content: space-around;
         padding: 0;
+        align-items: flex-start;
     }
-
 
     .submainmenu {
         display: none;
+    }
+
+    .bottomPart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
