@@ -212,40 +212,94 @@ ul {
 .blockWithShortLinks {
     position: relative;
     background-color: #ff912b;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 4px 4px 2px #5c5c5e;
 }
 
 
 .blockWithShortLinks img {
+    display: block;
+    margin: auto;
 
 }
 
 .newFilmsLinks {
-    /*position: absolute;*/
-    /*bottom: 1px;*/
+    position: absolute;
+    bottom: 0;
     background-color: aliceblue;
-    opacity: 0.5;
-    /*width: 100%;*/
+    opacity: 0;
+    width: 100%;
+}
+
+.newFilmsLinks:hover {
+    opacity: 0.6;
+}
+
+.buyTicket {
+    text-decoration: none;
+    background-color: #ccc0b1;
+    color: white;
+    padding: 1px 2px;
+    border-style: outset;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.buyTicket:hover {
+    background-color: #d66e68;
 }
 
 .newFilmsLinks p {
     margin: 0;
 }
 
-.previewFilmName{
-
+.chapter{
+    font-family: 'Russo One', sans-serif;
+  text-align: center;
 }
 .films_grid {
     display: grid;
     align-items: start;
     justify-content: center;
+    grid-gap: 5px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(3,auto);
+}
 
+.filmblock {
+    position: relative;
+    margin: auto 1%;
+}
+
+.linksaboutfilms {
+
+    position: absolute;
+    bottom: 1%;
+    right: 2%;
 }
 
 .filmblock img {
     height: auto;
     max-width: 100%;
+}
+
+.kino_small figcaption {
+    text-align: center;
+}
+
+
+.moviereview {
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.moviereview span p::first-letter {
+    float: left;
+    font-size: 3em;
+    color: #af140c;
+    margin-right: 2px;
 }
 
 .mainform {
